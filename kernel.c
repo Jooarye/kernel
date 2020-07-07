@@ -39,7 +39,7 @@ void kmain(void) {
 	char *vidpos = (char*)0x7c00;
 	*vidpos = 0;
 
-	clear();
+	kclear();
 
 	kprint("[$cInfo$h] Initialized screen buffer!", 0x07);
 	kprint("[$eError$h] Failed to load kernel modules!", 0x07);
