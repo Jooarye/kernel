@@ -1,4 +1,4 @@
-void print(char *str, int color) {
+void kprint(char *str, int color) {
 	char *vidpos = (char*)0x7c00;
 	char *vidptr = (char*)0xb8000;
 
@@ -19,7 +19,7 @@ void print(char *str, int color) {
 
 }
 
-void clear() {
+void kclear() {
 	char *vidpos = (char*)0x7c00;
 	char *vidptr = (char*)0xb8000;
 
@@ -41,7 +41,8 @@ void kmain(void) {
 
 	clear();
 
-	print("[$cInfo$h] Initializing screen buffer", 0x07);
+	kprint("[$cInfo$h] Initialized screen buffer!", 0x07);
+	kprint("[$eError$h] Failed to load kernel modules!", 0x07);
 
 	return;
 }
