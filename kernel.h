@@ -25,3 +25,8 @@ void kprint(char* string, uint8 color);
 void kprintln(char* string, uint8 color);
 void knewline();
 void kclear(uint8 color);
+
+
+// LOGGING PURPOSES ONLY
+void klog_fail(char* str);
+void klog_ok(char* str);

@@ -45,3 +45,23 @@ void kclear(uint8 color) {
 		i += 2;
 	}
 }
+
+void klog_fail(char* str) {
+    uint8 color = kcompose(LIGHT_GREY, BLACK);
+
+	kprint("[", color);
+	kprint("FAIL", kcompose(WHITE, RED));
+	kprint("] ", color);
+    kprint(str, color);
+	knewline();
+}
+
+void klog_ok(char* str) {
+    uint8 color = kcompose(LIGHT_GREY, BLACK);
+
+	kprint("[", color);
+	kprint(" OK ", kcompose(BLACK, LIGHT_GREEN));
+	kprint("] ", color);
+    kprint(str, color);
+	knewline();
+}
